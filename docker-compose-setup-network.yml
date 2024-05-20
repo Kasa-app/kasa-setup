@@ -1,0 +1,8 @@
+services:
+  helper_service:
+    image: alpine:latest
+    networks:
+      - internalnet
+networks:
+  internalnet:
+    name: internalnet

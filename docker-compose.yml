@@ -1,0 +1,12 @@
+services:
+  proxy:
+    image: nginx:latest
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf
+    ports:
+      - 80:80
+    networks:
+      - internalnet
+networks:
+  internalnet:
+    external: true
